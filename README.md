@@ -13,16 +13,16 @@ npm install --save mx-list
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'mx-list'
-import 'mx-list/dist/index.css'
+import { MxList } from 'mx-list'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return <MxList>{'Mx List'}</MxList>
 }
+
+export default App
+
 ```
 
 ## License
