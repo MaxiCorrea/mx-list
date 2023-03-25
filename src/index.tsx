@@ -1,10 +1,33 @@
 import * as React from 'react'
-import styles from './styles.module.css'
+import { List, Theme, createStyles, makeStyles } from '@material-ui/core'
 
-interface Props {
-  text: string
-}
+const useMxListStyles = makeStyles<Theme>(() =>
+  createStyles({
+    root: {
+      fontFamily: 'Gotham',
+      fontStyle: 'normal',
+      fontWeight: 'normal',
+      fontSize: '14px',
+      lineHeight: '26px',
+      minWidth: '160px'
+    },
+    padding: {
+      paddingTop: '0px',
+      paddingBottom: '0px'
+    }
+  })
+)
 
-export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+export const MxList: React.FC = (props) => {
+  const classes = useMxListStyles()
+  return (
+    <List
+      classes={{
+        root: classes.root,
+        padding: classes.padding
+      }}
+    >
+      {props.children}
+    </List>
+  )
 }

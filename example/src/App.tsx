@@ -1,10 +1,9 @@
 import React from 'react'
 
-import { ExampleComponent } from 'mx-list'
-import 'mx-list/dist/index.css'
+import { MxList } from 'mx-list'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <MxList>{'Mx List'}</MxList>
 }
 
 export default App
